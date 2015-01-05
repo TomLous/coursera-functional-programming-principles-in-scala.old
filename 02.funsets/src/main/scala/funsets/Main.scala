@@ -28,7 +28,7 @@ object Main extends App {
   val s10 = filter(s8, x => x % 2 == 1)
   println("s10: filter(s8, x => x%2==1)		" + FunSets.toString(s10))
 
-  var s11: Set = x => x >= 2 && x <= 4
+  def s11:Set = x => x >= 2 && x <= 4
   println("s11: x => x >=2 && x <= 4  		" + FunSets.toString(s11))
 
   println("\n\n2.2 Queries and Transformations on Sets")
