@@ -13,7 +13,7 @@ object Main {
     println()
     println()
     println("2. Parentheses Balancing")
-    var strs = List("(if (zero? x) max (/ 1 x))","I told him (that itÕs not (yet) done). (But he wasnÕt listening)", ":-)", "())(")
+    var strs = List("(if (zero? x) max (/ 1 x))","I told him (that itâ€™s not (yet) done). (But he wasnâ€™t listening)", ":-)", "())(")
     strs.foreach(str => println("\"" + str + "\" match? => " + balance(str.toList)))
     
     println()
