@@ -43,7 +43,6 @@ object Lists {
    */
   def max(xs: List[Int]): Int = {
 
-
     def maxLoop(curMax: Int, ls: List[Int]): Int = {
       if(ls.isEmpty) curMax
       else {
