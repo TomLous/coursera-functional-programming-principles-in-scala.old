@@ -1,7 +1,8 @@
-coursera-functional-programming-principles-in-scala
+Coursera's Functional Programming Principles in Scala
 ===================================================
 
-Submissions for Coursera's Functional Programming in Scala course by Martin Odersky, École Polytechnique Fédérale de Lausanne
+Assignments & Submissions for Coursera's Functional Programming in Scala course by Martin Odersky, École Polytechnique Fédérale de Lausanne
+https://www.coursera.org/course/progfun
 
 # Week 0: 00.example
 ## Getting Started!
