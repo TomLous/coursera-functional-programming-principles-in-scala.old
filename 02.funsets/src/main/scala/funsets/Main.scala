@@ -29,10 +29,23 @@ object Main extends App {
     val s10 = filter(s8, x => x%2==1)
     println("s10: filter(s8, x => x%2==1)		" + FunSets.toString(s10))
     
+    var s11:Set = x => x >=2 && x <= 4 
+    println("s11: x => x >=2 && x <= 4  		" + FunSets.toString(s11))
     
-    //println("contains(singletonSet(1), 1) " + contains(singletonSet(1), 1))
-//    println("contains(singletonSet(2), 1) " + contains(singletonSet(2), 1))
+  
+     println("\n\n2.2 Queries and Transformations on Sets")
+     println("forall(s11, x => x < 4):		"+ forall(s11, x=>x<4) )
+     println("forall(s11, x => x < 5):		"+ forall(s11, x=>x<5) )
+     
+     println("exists(s11, x => x == 3):		"+ exists(s11, x => x==3) )
+     println("exists(s11, x => x == 1):		"+ exists(s11, x => x==1) )
+     
+     val s12 = map(s8, x => x * x)
+     println("s12: map(s8, x => x * x):		" + FunSets.toString(s12))
+     val s13 = map(s11, x => x / 2)
+     println("s13: map(s11, x => x / 2):		" + FunSets.toString(s13))
+   
 
-    
+   
     
 }

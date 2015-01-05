@@ -29,10 +29,10 @@ class FunSetSuite extends FunSuite {
   /**
    * Tests are written using the "test" operator and the "assert" method.
    */
-  test("string take") {
-    val message = "hello, world"
-    assert(message.take(5) == "hello")
-  }
+//  test("string take") {
+//    val message = "hello, world"
+//    assert(message.take(5) == "hello")
+//  }
 
   /**
    * For ScalaTest tests, there exists a special equality operator "===" that
@@ -43,15 +43,47 @@ class FunSetSuite extends FunSuite {
    * Try it out! Change the values so that the assertion fails, and look at the
    * error message.
    */
-  test("adding ints") {
-    assert(1 + 2 === 3)
-  }
+//  test("adding ints") {
+//    assert(1 + 2 === 4)
+//  }
 
   
   import FunSets._
 
   test("contains is implemented") {
     assert(contains(x => true, 100))
+  }
+  
+  test("singletonSet is implemented") {
+    assert(contains(singletonSet(1),1))
+  }
+  
+  test("union is implemented") {
+    assert(contains(union(singletonSet(1),singletonSet(1)),1))
+  }
+  
+  test("intersect is implemented") {
+    assert(contains(intersect(singletonSet(1),singletonSet(1)),1))
+  }
+  
+  test("diff is implemented") {
+    assert(contains(diff(singletonSet(1),singletonSet(2)),1))
+  }
+  
+  test("filter is implemented") {
+    assert(contains(filter(singletonSet(1),x=>x==1),1))
+  }
+  
+  test("forall is implemented") {
+    assert(forall(singletonSet(1),x=>x==1))
+  }
+  
+  test("exists is implemented") {
+    assert(exists(singletonSet(1),x=>x==1))
+  }
+  
+  test("map is implemented") {
+    assert(contains(map(singletonSet(1),x=>x),1))
   }
   
   /**
@@ -77,6 +109,17 @@ class FunSetSuite extends FunSuite {
     val s1 = singletonSet(1)
     val s2 = singletonSet(2)
     val s3 = singletonSet(3)
+    val s4 = union(s1, s2)
+    val s5 = union(s2, s3)      
+    val s6 = diff(s4, s1)    
+    val s7 = intersect(s4, s5)
+    val s8 = union(s4, s5)    
+    val s9 = filter(s8, x => x>1)    
+    val s10 = filter(s8, x => x%2==1)   
+    var s11:Set = x => x >2 && x < 5 
+    val s12 = map(s8, x => x * x)
+    val s13 = map(s11, x => x / 2)
+    
   }
 
   /**
