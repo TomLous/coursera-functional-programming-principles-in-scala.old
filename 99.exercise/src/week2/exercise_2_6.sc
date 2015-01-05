@@ -19,8 +19,8 @@ class Rational_2_6(x:Int, y:Int){
 	def this(x: Int) = this(x, 1)
 	
 	private def gcd(a: Int, b: Int): Int = if(b==0) a else gcd(b, a % b)
-	def numer = x / gcd(x, y)
-	def denom = y / gcd(x, y)
+	def numer = x / gcd(x,y)
+	def denom = y / gcd(x,y)
 	
 	def less(that: Rational_2_6) = numer * that.denom < that.numer * denom
 	
@@ -36,5 +36,8 @@ class Rational_2_6(x:Int, y:Int){
 	def sub(that: Rational_2_6) = add(that.neg)
 		
 			
-	override def toString = numer + "/" + denom
+	override def toString = {
+		val g = gcd(numer, denom)
+		numer/g + "/" + denom/g
+		}
 }
