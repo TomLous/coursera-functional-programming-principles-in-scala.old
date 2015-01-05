@@ -58,6 +58,9 @@ Once again, you can make use of functions isEmpty, head and tail on the list of 
 
 Hint: Think of the degenerate cases. How many ways can you give change for 0 CHF? How many ways can you give change for >0 CHF, if you have no coins?
 
+# Video Lectures' exercises: 99.exercise
+Some worksheets with exercises
+
 # Notes
 ## SBT Build
 
